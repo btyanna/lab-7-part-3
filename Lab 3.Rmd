@@ -17,8 +17,11 @@ library(tidyverse)
 # scatterplot
 
 scatteriris = ggplot(iris, aes(x = Petal.Length, y = Petal.Width)) +
-  geom_point() +
-  labs(x = "Petal Length (cm)", y = "Petal Width (cm)", title = "Petal Length vs Petal Width from Iris Dataset")
+  geom_point(aes(color = Petal.Length)) +
+  labs(x = "Petal Length (cm)", y = "Petal Width (cm)", title = "Petal Length vs Petal Width from Iris Dataset") + 
+  facet_wrap(~ Species)
+  
+
 
 scatteriris
 ```
