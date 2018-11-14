@@ -1,0 +1,25 @@
+---
+title: "Lab 7 Part 3"
+author: "Tyanna Bui"
+date: "11/14/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Tyanna: Creating scatterplot of iris dataset
+```{r}
+# loading tidyverse
+library(tidyverse)
+
+# scatterplot
+
+scatteriris = ggplot(iris, aes(x = Petal.Length, y = Petal.Width)) +
+  geom_point() +
+  labs(x = "Petal Length (cm)", y = "Petal Width (cm)", title = "Petal Length vs Petal Width from Iris Dataset")
+
+scatteriris
+```
+
